@@ -4,6 +4,7 @@ import com.lms.backend.dtos.ApiBaseResponse;
 import com.lms.backend.dtos.BookDTO;
 import com.lms.backend.interfaces.BookService;
 import com.lms.backend.models.Book;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +12,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 public class BookController {
 
-    private BookService service;
+    private final BookService service;
 
 
     @PostMapping("/book")

@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import java.util.Date;
 
@@ -23,5 +24,6 @@ public class Book {
     private String title;
     private String author;
     private String isbn;
+    //@JsonDeserialize
     private Date publishedDate;
 }
